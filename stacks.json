@@ -1,0 +1,23 @@
+{
+  "title": "WordPress Helm Chart",
+  "description": "WordPress Helm Chart",
+  "logo": "_images/SalesStack.png",
+  "enabled": true,
+  "category_label": [
+    "Operators"
+  ],
+  "document": "data-logging-stack",
+  "stack_id": "wordpress",
+  "type": "stack",
+  "categories": [
+    "Monitoring"
+  ],
+  "is_certified": true,
+  "has_support": true,
+  "has_dataset": false,
+  "has_api": false,
+  "git_url": "https://github.com/aradhana14nov/Wordpress-Helm-Chart.git",
+  "git_commit": "4013a4ddb9061dd143ec76aaebe1e6ac3a0711aa",
+  "installTime": "15 minutes",
+  "isStacksSaved": true
+}

@@ -1,1 +1,1 @@
-# WordPress-Helm-Chart-tile
+# WordPress Helm-Chart

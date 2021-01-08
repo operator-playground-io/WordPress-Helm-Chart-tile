@@ -1,0 +1,52 @@
+{
+  "name": "WordPress Helm Chart",
+  "description": "WordPress Bitnami Helm Chart",
+  "logo": "_images/SalesStack.png",
+  "has_supporting_content": true,
+  "stack_id": "wordpress",
+  "type": "stack",
+  "categories": ["CMS"],
+  "platform": "Kubernetes",
+  "cover": "cover.md",
+  "meta": {
+    "Monitoring": ["WordPress"],
+    "Type":[
+         "Chart"
+      ],
+    "Install time": ["20 minutes"]
+  },
+"deployment_information": {
+  "Operator Project": "N/A",
+  "Deployment Namespace": "wordpress"
+},
+ "commands": [
+    {
+      "description": "Create Namespace",
+      "exec": "kubectl create namespace wordpress"
+    },
+   {
+      "description": "Create hostpath for WordPress and MariaDB PVs",
+      "exec": "sudo mkdir -p /bitnami/mariadb/data && sudo mkdir -p /bitnami/wordpress/wp-content && sudo chmod -R 777 /bitnami" 
+    },
+    {
+      "description": "Clone and Prepare ",
+      "exec": "cd /home/student/projects && git clone https://github.com/aradhana14nov/Wordpress-Helm-Chart && cd Wordpress-Helm-Chart && kubectl create -f mariadbpv.yaml && kubectl create -f wordpresspv.yaml"
+    },
+    {
+      "description": "Add Bitnami Repo",
+      "exec": "helm repo add bitnami https://charts.bitnami.com/bitnami"
+    },
+    {
+      "description": "Install the chart",
+      "exec": "helm install wordpress bitnami/wordpress --values=wordpress-values.yaml --namespace wordpress"
+    }
+   
+  ],
+  "display": [
+    {
+      "name": "Developer Dashboard",
+      "url": "##DNS.host##/codeserver",
+      "enabled": true
+    }
+  ]
+}
