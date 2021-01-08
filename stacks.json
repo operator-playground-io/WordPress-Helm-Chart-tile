@@ -4,13 +4,13 @@
   "logo": "_images/SalesStack.png",
   "enabled": true,
   "category_label": [
-    "Operators"
+    "Helm"
   ],
   "document": "data-logging-stack",
   "stack_id": "wordpress",
   "type": "stack",
   "categories": [
-    "Monitoring"
+    "CMS"
   ],
   "is_certified": true,
   "has_support": true,
