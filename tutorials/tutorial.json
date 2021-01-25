@@ -5,36 +5,36 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" A User Guide for WordPress Bitnami Helm Chart Installation",
+         "description":"Learn what are the steps to install WordPress Bitnami Helm Chart",
          "duration":"15 min",
          "tutorial_name":"bitnami-helm-chart-installation.md",
-         "title":"How to Install WordPress Bitnami Helm Chart Tutorial"
+         "title":"1: Steps to Install WordPress Bitnami Helm Chart"
       },
       {
-         "description":" How to verify chart is installed successfully.",
+         "description":"Learn how to verify chart is installed successfully.",
          "duration":"5 min",
          "tutorial_name":"verify-wordpress-chart-installation.md",
-         "title":"Verify Chart Installation is successful"
+         "title":"2: Verify status of Installation of chart"
       },
       {
-         "description":"How to access WordPress Console",
+         "description":"Learn how to access WordPress Console",
          "duration":"5 min",
          "tutorial_name":"access-wordpress-console.md",
-         "title":"Access Wordpress Console"
+         "title":"3: Access wordpress console"
       },
 
       {
          "description":" Detail description of Configuration Parameters of WordPress Helm Chart",
          "duration":"30 min",
          "tutorial_name":"configuration-parameters-of-wordpress-helm-chart.md",
-         "title":"Configuration Parameters of WordPress Helm Chart Tutorial"
+         "title":"4: Configuration Parameters of WordPress Helm Chart"
       },
       
       {
-         "description":" How to uninstall Helm Chart",
+         "description":"Learn how to uninstall Helm Chart",
          "duration":"5 min",
          "tutorial_name":"uninstall-helm-chart.md",
-         "title":"Uninstall WordPress Helm Chart"
+         "title":"5: Uninstall WordPress Helm Chart"
       }
       
    ],
