@@ -20,6 +20,7 @@ In addition to leveraging the intrinsic scalability and high availability aspect
 ### WordPress Architecture
 
 In below architectural diagram, the PHP application will serve incoming HTTP requests, reads/writes are made to the file upload directory and queries are made against the backend MySQL database.
+
 A high level WordPress Architectural flow of multi node installation of WordPress without Kubernetes or Portworx is shown below :
 
 ![](_images/wordpress-architecture.png)
