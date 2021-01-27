@@ -30,7 +30,7 @@
     },
     {
       "description": "Clone and Prepare ",
-      "exec": "cd /home/student/projects && git clone https://github.com/aradhana14nov/Wordpress-Helm-Chart && cd Wordpress-Helm-Chart && kubectl create -f mariadbpv.yaml && kubectl create -f wordpresspv.yaml"
+      "exec": "cd /home/student/projects && git clone https://github.com/operator-playground-io/WordPress-Helm-Chart-tile.git && cd Wordpress-Helm-Chart-tile && kubectl create -f mariadbpv.yaml && kubectl create -f wordpresspv.yaml"
     },
     {
       "description": "Add Bitnami Repo",
