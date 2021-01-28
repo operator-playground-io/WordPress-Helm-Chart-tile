@@ -1,7 +1,7 @@
 {
   "name": "WordPress Helm Chart",
   "description": "WordPress Bitnami Helm Chart",
-  "logo": "_images/wordpress-logo.jpg",
+  "logo": "_images/wordpress-logo1.png",
   "has_supporting_content": true,
   "stack_id": "wordpress",
   "type": "stack",
