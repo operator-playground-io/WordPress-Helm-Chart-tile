@@ -1,7 +1,7 @@
 {
   "name": "WordPress Helm Chart",
   "description": "WordPress Bitnami Helm Chart",
-  "logo": "_images/SalesStack.png",
+  "logo": "_images/logo.png",
   "has_supporting_content": true,
   "stack_id": "wordpress",
   "type": "stack",
@@ -16,7 +16,7 @@
     "Install time": ["10 minutes"]
   },
 "deployment_information": {
-  "Operator Project": "N/A",
+  "Operator Project": "/home/student/projects/wordpress-helm-chart-yaml",
   "Deployment Namespace": "wordpress"
 },
  "commands": [
@@ -30,7 +30,7 @@
     },
     {
       "description": "Clone and Prepare ",
-      "exec": "cd /home/student/projects && git clone https://github.com/operator-playground-io/WordPress-Helm-Chart-tile.git && cd Wordpress-Helm-Chart-tile && kubectl create -f mariadbpv.yaml && kubectl create -f wordpresspv.yaml"
+      "exec": "cd /home/student/projects && git clone https://github.com/operator-playground-io/wordpress-helm-chart-yaml.git && cd wordpress-helm-chart-yaml && kubectl create -f mariadbpv.yaml && kubectl create -f wordpresspv.yaml"
     },
     {
       "description": "Add Bitnami Repo",
