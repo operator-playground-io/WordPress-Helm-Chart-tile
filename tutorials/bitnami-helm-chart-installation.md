@@ -100,7 +100,7 @@ Command:
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 
-you should see the following output:
+You should see the following output:
 
 ```
 "bitnami" has been added to your repositories
@@ -138,7 +138,7 @@ Step 7: Command for WordPress Helm Chart installation:
 helm install wordpress bitnami/wordpress --values=wordpress-values.yaml --namespace wordpress 
 ```
 
-output:
+Output:
 
 ```
 NAME: wordpress
