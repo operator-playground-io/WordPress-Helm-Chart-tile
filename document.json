@@ -11,9 +11,9 @@
   "meta": {
     "CMS": ["WordPress"],
     "Type":[
-         "Chart"
+         "Helm"
       ],
-    "Install time": ["20 minutes"]
+    "Install time": ["10 minutes"]
   },
 "deployment_information": {
   "Operator Project": "N/A",
