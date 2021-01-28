@@ -57,11 +57,11 @@ echo Password: $(kubectl get secret --namespace wordpress wordpress -o jsonpath=
 
 ![](_images/console-admin-final.PNG)
 
-On successful login you will be see the following dashbaord page:
+On successful login you will be see the following dashboard:
 
 ![](_images/dashboard-wordpress.PNG)
 
-Navigate to the "Plugins" section and you can check what all plugin installed and activated as below snapshot:
+Navigate to the "Plugins" section.You can see all the plugins installed and activated as in below snapshot:
 
 ![](_images/plugins.PNG)
 
