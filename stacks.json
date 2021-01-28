@@ -16,8 +16,8 @@
   "has_support": true,
   "has_dataset": false,
   "has_api": false,
-  "git_url": "https://github.com/aradhana14nov/Wordpress-Helm-Chart.git",
-  "git_commit": "15c84312bbe05f206ee2f276b4628d5a615273ee",
+  "git_url": "https://github.com/operator-playground-io/WordPress-Helm-Chart-tile.git",
+  "git_commit": "16f0e89fcd06d1a45bd93f3dcb21db5aa9d7bbaf",
   "installTime": "10 minutes",
   "isStacksSaved": true
 }
