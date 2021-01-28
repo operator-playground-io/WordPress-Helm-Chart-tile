@@ -1,4 +1,4 @@
-<h1 align="center">WordPress Operator</h1>
+<h1 align="center">WordPress</h1>
 
 ![Logo](_images/logo.png)
 
