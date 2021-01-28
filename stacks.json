@@ -1,7 +1,7 @@
 {
   "title": "WordPress Helm Chart",
   "description": "WordPress Helm Chart",
-  "logo": "_images/SalesStack.png",
+  "logo": "_images/logo.png",
   "enabled": true,
   "category_label": [
     "Helm"
