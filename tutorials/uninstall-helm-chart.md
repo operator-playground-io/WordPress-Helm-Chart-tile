@@ -29,15 +29,10 @@ Output:
 Error: release: not found
 ```
 
-- Delete the namespace :
-
-```execute
-kubectl delete ns wordpress
-```
 
 - Delete the PersistentVolumes: 
 ```execute
-kubectl delete -f /home/student/projects/Wordpress-Helm-Chart/mariadbpv.yaml
+kubectl delete -f /home/student/projects/wordpress-helm-chart-yaml/mariadbpv.yaml
 ```
 
 Output:
@@ -47,7 +42,7 @@ persistentvolume "mariadbpv" deleted
 ```
 
 ```execute
-kubectl delete -f /home/student/projects/Wordpress-Helm-Chart/wordpresspv.yaml
+kubectl delete -f /home/student/projects/wordpress-helm-chart-yaml/wordpresspv.yaml
 ```
 
 Output:
@@ -56,5 +51,10 @@ Output:
 persistentvolume "wordpresspv" deleted
 ```
 
+- Delete the namespace :
+
+```execute
+kubectl delete ns wordpress
+```
 
 This will release all the resources associated with installed chart.
