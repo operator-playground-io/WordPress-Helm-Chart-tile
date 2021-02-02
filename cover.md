@@ -32,8 +32,8 @@ In this tutorial,we are going to cover following topics:
 - How to Install WordPress Bitnami Helm Chart and verify its successful installation.
 - Verify status of pods and services. 
 - Configurable parameters of the WordPress Bitnami Helm Chart and their default values.
-- How to access WordPress Console
-- Uninstall WordPress Helm Chart and release resources
+- How to access WordPress Console.
+- Uninstall WordPress Helm Chart and release resources.
 
 
 
