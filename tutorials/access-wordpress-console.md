@@ -1,6 +1,6 @@
 ---
-title: How to Access WordPress site and WordPress Admin Console
-description: This tutorial explains how to access WordPress site and WordPress Admin Console once chart installed successfully
+title: Access WordPress site and WordPress Admin Console
+description: Learn how to access WordPress site and WordPress Admin Console once chart installed successfully
 ---
 
 
