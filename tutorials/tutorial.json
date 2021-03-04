@@ -7,7 +7,7 @@
       {
          "description":"Learn what are the steps to install WordPress Bitnami Helm Chart",
          "duration":"15 min",
-         "tutorial_name":"bitnami-helm-chart-installation.md",
+         "tutorial_name":"bitnami-wp-helm-chart-installation.md",
          "title":"1: Steps to Install WordPress Bitnami Helm Chart"
       },
       {
