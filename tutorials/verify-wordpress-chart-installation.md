@@ -1,21 +1,20 @@
 ---
 title: Verify WordPress Chart Installation
-description: This tutorial explains how to verify that WordPress chart installed successfully
+description: Learn how to verify that WordPress chart installed successfully.
 ---
 
 
-Once the helm chart installation done we need to verify all the pods and services are up and running.
+Once the helm chart installation is complete, verify that all the pods and services are up and running.
 
-Execute below command to check status of pods and services: 
+### Check the Pod Status
 
-### Check the pod status
-
+- Execute the command below to check the status of pods and services.
 
 ```execute
 kubectl get pods --namespace wordpress
 ```
 
-You will see similar to this output:
+You will see the output as below.
 
 ```
 NAME                         READY   STATUS    RESTARTS   AGE
@@ -23,20 +22,21 @@ wordpress-56cb97d698-pvvm6   1/1     Running   0          100s
 wordpress-mariadb-0          1/1     Running   0          100s
 ```
 
-Once the wordpress POD is up and running , your wordpress is ready to use
+If the WordPress Pod is up and running, it means that WordPress is ready to use.
 
 
 
-### Check all the Kubernetes resources status
+### Check the status of all the Kubernetes resources
 
-You can run the following command to know status of all the deployed resources inside the namespace wordpress
+
+- Run the following command to know status of all the deployed resources inside the namespace “wordpress”
 
 
 ```execute
 kubectl get all --namespace wordpress
 ```
 
-All the deployment and service status should be Running.
+The output should display the deployment and service status as Running.
 
 ```
 NAME                             READY   STATUS    RESTARTS   AGE
@@ -56,3 +56,10 @@ replicaset.apps/wordpress-56cb97d698   1         1         1       2m16s
 NAME                                 READY   AGE
 statefulset.apps/wordpress-mariadb   1/1     2m16s
 ```
+
+It takes a while for the Service Status to be RUNNING. Please wait till the time before moving forward.
+
+
+### Conclusion
+
+WordPress chart installed successfully.
