@@ -1,33 +1,35 @@
 ---
-title: WordPress Bitnami Helm Chart Installation Tutorial
-description: This tutorial explains how we Installed WordPress Bitnami Helm Chart
+title: WordPress Bitnami Helm Chart Installation
+description: Learn how to install WordPress Bitnami Helm Chart
 ---
 
-### Install WordPress Bitnami Helm Chart
+### Introduction
 
-This tutorial is made just to describe what all steps are actually being performed behind the WordPress Chart "Install" button and is just for knowledge perspective.
-Please do not execute these manually if you already installed the WordPress Helm Chart using "Install" button. 
+This tutorial is intended to provide you knowledge about the complete process that is executed in the background when you press “Install” button. behind the WordPress Chart "Install" button and is just for knowledge perspective. Please do not execute the steps manually if you have already installed the WordPress Helm Chart using "Install" button.
 
-We have followed following steps to install WordPress Bitnami Helm Chart :
 
-Step 1: Create a namespace : "wordpress". 
+### Install Bitnami WordPress Helm Chart
+
+We have followed the below procedure to install WordPress (Bitnami) Helm Chart.
+
+**Step 1: Create a namespace : "wordpress". **
 
 ```
 kubectl create namespace wordpress
 ```
 
-Step 2: Create hostpath for both MariaDV PersistentVolume and WordPress PersistentVolume with root user and give full permission to /bitnami.
+**Step 2: Create the hostpath for both MariaDB PersistentVolume and WordPress PersistentVolume with root user privilege and give the full permission to /bitnami folder location.**
 
-Commands :
+The required command is as follows.
 
 ```
 sudo mkdir -p /bitnami/mariadb/data && sudo mkdir -p /bitnami/wordpress/wp-content && sudo chmod -R 777 /bitnami
 ```
 
 
-By default, the WordPress chart installs MariaDB on a separate pod inside the cluster and uses it as the WordPress database.So for these two pods: MariaDB pod and WordPress Pod, we need to define PersistentVolumes.
+By default, the WordPress chart installs MariaDB on a separate pod inside the cluster and uses it as the WordPress database. So for these two pods: MariaDB pod and WordPress Pod, we need to define PersistentVolumes(PVs).
    
-Step 3:  Define the PersistentVolume for mariadb-pv where the mariadb data to be stored. The hostPath tells the mysql directory is in /bitnami/mariadb location
+**Step 3:  Define the PersistentVolume(PV) for mariadb-pv where the mariadb data to be stored. The hostPath tells that mysql directory is in /bitnami/mariadb location.**
 
 ```
 cat <<'EOF' > mariadbpv.yaml
@@ -52,14 +54,14 @@ EOF
 ```
 
 
-Command to create mariadb PersistentVolume :
+Following is the required command to create mariadb PersistentVolume
 
 ```
 kubectl create -f  mariadbpv.yaml
 ```
 
 
-Step 4: Define the PersistentVolume for wordpress-pv where the wordpress site data to be stored. The hostPath tells the mysql directory is in /data location
+**Step 4: Define the PersistentVolume (PV) for wordpress-pv where the Wordpress site data is to be stored. The hostPath tells that the mysql directory is in /data location.**
 
 ```
 cat <<'EOF' > wordpresspv.yaml
@@ -84,7 +86,7 @@ EOF
 ```
 
 
-Command to create wordpress PersistentVolume :
+- **Execute the command below to create Wordpress PersistentVolume.**
 
 ```
 kubectl create -f  wordpresspv.yaml
@@ -92,7 +94,7 @@ kubectl create -f  wordpresspv.yaml
 
 
 
-Step 5: Add ‘bitnami' to your repo list:
+**Step 5: Add ‘bitnami' to your repo list using the command below.**
 
 Command:
 
@@ -107,11 +109,11 @@ You should see the following output:
 ```
 
 
-Step 6: Setup User account along with Username and Password for WordPress.
+**Step 6: Setup the user account along with Username and Password for WordPress access.**
 
-As Wordpress is CMS, so we need to have a user account to access it.
+Note: Since Wordpress is a CMS, so we need to have a user account to access it.
 
-Created below yaml file to Setup WordPress User account along with Username and Password:
+- **Create the below yaml file to setup WordPress user account along with Username and Password.**
 
 ```
 cat <<'EOF' > wordpress-values.yaml
@@ -130,15 +132,15 @@ EOF
 ```
 
 
-Now we have completed all the pre-requisites for the installation. 
+Till this stage, we have completed all the pre-requisites for installing WordPress helm chart.
 
-Step 7: Command for WordPress Helm Chart installation:
+Now, execute the below command to install the chart.
 
 ```
 helm install wordpress bitnami/wordpress --values=wordpress-values.yaml --namespace wordpress 
 ```
 
-Output:
+This should produce the output as below.
 
 ```
 NAME: wordpress
@@ -169,6 +171,8 @@ To access your WordPress site from outside the cluster follow the steps below:
   echo Password: $(kubectl get secret --namespace wordpress wordpress -o jsonpath="{.data.wordpress-password}" | base64 --decode)
 ```
 
+You have successfully installed the WordPress Helm Chart which you can use further to access a WordPress site.
 
+### Conclusion
 
-
+You have successfully installed the WordPress Helm Chart which you can use further to access a WordPress site.
