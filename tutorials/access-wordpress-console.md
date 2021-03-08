@@ -1,6 +1,6 @@
 ---
-title: Access WordPress site and WordPress Admin Console
-description: Learn how to access WordPress site and WordPress Admin Console once chart installed successfully
+title: Access WordPress admin console and website
+description: Learn how to access WordPress admin console and website post chart installation.
 ---
 
 
@@ -16,10 +16,10 @@ Your WordPress site can be accessed through the following DNS name from within y
  wordpress.wordpress.svc.cluster.local (port 80)
 ```
 
-To access your WordPress site and Dashboard from outside the cluster follow the steps below:
+To access your WordPress site and dashboard from outside the cluster follow the steps below:
 
 
-1. Get the WordPress URL by running below commands:
+Step 1: Get the WordPress URL by running the following commands:
 
 
 ```execute
@@ -28,27 +28,28 @@ To access your WordPress site and Dashboard from outside the cluster follow the 
 ```
 
 
-2. Open a browser and access WordPress Site using the obtained URL by executing below command:
+Step 2: Open your browser and access the WordPress site via retrieved URL by executing the command below.
 
 ```execute
 echo "WordPress URL: http://$NODE_IP:$NODE_PORT/"
 ```
-You should see your WordPress site with the custom theme that you have included in your image already activated. 
+You should see your WordPress site with the custom theme that you included in your image already activated. 
 
-Please see the below snapshot how it looks like :
+Please see the below snapshot to see how it looks like :
 
 ![](_images/wordpress-site.PNG)
 
-3. Access WordPress Admin Console obtained by executing below command:
+Step 3: Access your WordPress admin console by executing the command as below.
 
 ```execute
 echo "WordPress Admin URL: http://$NODE_IP:$NODE_PORT/admin"
 ```
-Open WordPress Admin Url in browser. You will see following login page :
+
+Step 4: Open the WordPress Admin URL in your browser. You will see the following login page.
 
 ![](_images/login-console-final.PNG)
 
-- Log in to WordPress admin login console with the credentials obtained from running below commands:
+Step 5: Run the command below and log in to WordPress admin console using the obtained credentials.
 
 ```execute
 echo Username: jhooq
@@ -57,35 +58,39 @@ echo Password: $(kubectl get secret --namespace wordpress wordpress -o jsonpath=
 
 ![](_images/console-admin-final.PNG)
 
-On successful login you will be see the following dashboard:
+On successful login, you should see the dashboard as depicted below.
 
 ![](_images/dashboard-wordpress.PNG)
 
-Navigate to the "Plugins" section.You can see all the plugins installed and activated as in below snapshot:
+Step 6: Navigate to the "Plugins" section.
+
+Here, you will be able to see all the installed and activated plugins. See the sample below.
 
 ![](_images/plugins.PNG)
 
 
 ### Create Your First Post
 
-You can now add a new post using the following steps:
+Once you can access the dashboard, you can now add and publish a new post through the following steps.
 
-1. Select the “Posts -> Add New” menu option to create a new post.
+Step 1: Select the “Posts -> Add New” menu option to create a new post.
 
   ![](_images/posts.png)
 
-2. Add new WordPress post
+Step 2: Add your new WordPress post.
 
-3. Enter a title and content for the post. You can use the formatting tools at the top of the content area to format your post and add hyperlinks or images.
+Step 3: Enter a title and add the content to the post space.
 
-4. Optionally, choose the format and category for your post.
+You can use the formatting tools at the top of the content area to format your post and add hyperlinks or images.
 
-5. Publish it immediately using the “Publish” button.
+Step 4: Choose the format and category for your post. (This step is optional)
+
+Step 5: Publish the post to the site using the “Publish” button.
    
    ![](_images/publish.png)
 
 
-And now, when you visit your blog’s front page, you should see your new post.
+After completing the above steps, you should be able to see the new post on the blog ’s page of your site.
 
 
 
