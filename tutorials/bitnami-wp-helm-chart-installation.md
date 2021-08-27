@@ -14,7 +14,7 @@ We have followed the below procedure to install WordPress (Bitnami) Helm Chart.
 
 **Step 1: Create a namespace : "wordpress". **
 
-```
+```execute
 kubectl create namespace wordpress
 ```
 
@@ -22,7 +22,7 @@ kubectl create namespace wordpress
 
 The required command is as follows.
 
-```
+```execute
 sudo mkdir -p /bitnami/mariadb/data && sudo mkdir -p /bitnami/wordpress/wp-content && sudo chmod -R 777 /bitnami
 ```
 
@@ -31,7 +31,7 @@ By default, the WordPress chart installs MariaDB on a separate pod inside the cl
    
 **Step 3:  Define the PersistentVolume(PV) for mariadb-pv where the mariadb data to be stored. The hostPath tells that mysql directory is in /bitnami/mariadb location.**
 
-```
+```execute
 cat <<'EOF' > mariadbpv.yaml
 apiVersion: v1
 kind: PersistentVolume
@@ -56,14 +56,14 @@ EOF
 
 Following is the required command to create mariadb PersistentVolume
 
-```
+```execute
 kubectl create -f  mariadbpv.yaml
 ```
 
 
 **Step 4: Define the PersistentVolume (PV) for wordpress-pv where the Wordpress site data is to be stored. The hostPath tells that the mysql directory is in /data location.**
 
-```
+```execute
 cat <<'EOF' > wordpresspv.yaml
 apiVersion: v1
 kind: PersistentVolume
@@ -88,7 +88,7 @@ EOF
 
 - **Execute the command below to create Wordpress PersistentVolume.**
 
-```
+```execute
 kubectl create -f  wordpresspv.yaml
 ```
 
@@ -98,7 +98,7 @@ kubectl create -f  wordpresspv.yaml
 
 Command:
 
-```
+```execute
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 
@@ -115,7 +115,7 @@ Note: Since Wordpress is a CMS, so we need to have a user account to access it.
 
 - **Create the below yaml file to setup WordPress user account along with Username and Password.**
 
-```
+```execute
 cat <<'EOF' > wordpress-values.yaml
 wordpressUsername: jhooq
 wordpressPassword: jhooq
@@ -136,7 +136,7 @@ Till this stage, we have completed all the pre-requisites for installing WordPre
 
 Now, execute the below command to install the chart.
 
-```
+```execute
 helm install wordpress bitnami/wordpress --values=wordpress-values.yaml --namespace wordpress 
 ```
 
